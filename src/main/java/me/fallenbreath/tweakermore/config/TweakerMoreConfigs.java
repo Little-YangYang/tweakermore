@@ -63,10 +63,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.item.Items;
 
 import java.lang.reflect.Field;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Stream;
 
 import static me.fallenbreath.tweakermore.config.ConfigFactory.*;
@@ -87,6 +84,19 @@ public class TweakerMoreConfigs
 	////////////////////
 
 	@Config(type = Config.Type.TWEAK, restriction = @Restriction(require = @Condition(ModIds.itemscroller)), category = Config.Category.FEATURES)
+	public static final TweakerMoreConfigBooleanHotkeyed AUTO_COLLECT_LIST_ITEM = newConfigBooleanHotkeyed("autoCollectListItem");
+
+	@Config(type = Config.Type.LIST, restriction = @Restriction(require = @Condition(ModIds.itemscroller)), category = Config.Category.FEATURES)
+	public static final TweakerMoreConfigStringList AUTO_COLLECT_LIST_Item_LIST = newConfigStringList("autoCollectListItemList", ImmutableList.of(RegistryUtil.getItemId(Items.SPLASH_POTION)));
+
+	@Config(type = Config.Type.GENERIC, restriction = @Restriction(require = @Condition(ModIds.itemscroller)), category = Config.Category.FEATURES)
+	public static final TweakerMoreConfigBoolean AUTO_COLLECT_LIST_ITEM_DROP = newConfigBoolean("autoCollectListItemDrop", false);
+
+	@Config(type = Config.Type.GENERIC, restriction = @Restriction(require = @Condition(ModIds.itemscroller)), category = Config.Category.FEATURES)
+	public static final TweakerMoreConfigBoolean AUTO_COLLECT_LIST_ITEM_CLOSE_GUI = newConfigBoolean("autoCollectListItemCloseGui", true);
+
+
+	@Config(type = Config.Type.TWEAK, restriction = @Restriction(require = @Condition(ModIds.itemscroller)), category = Config.Category.FEATURES)
 	public static final TweakerMoreConfigBooleanHotkeyed AUTO_CLEAN_CONTAINER = newConfigBooleanHotkeyed("autoCleanContainer");
 
 	@Config(type = Config.Type.TWEAK, restriction = @Restriction(require = @Condition(ModIds.itemscroller)), category = Config.Category.FEATURES)
@@ -102,6 +112,8 @@ public class TweakerMoreConfigs
 	public static final TweakerMoreConfigStringList AUTO_CLEAN_CONTAINER_BLACKLIST = newConfigStringList("autoCleanContainerBlackList", ImmutableList.of(RegistryUtil.getItemId(Items.SHULKER_BOX)));
 
 	public static final ItemRestriction AUTO_CLEAN_CONTAINER_RESTRICTION = new ItemRestriction();
+
+	public static final ItemRestriction AUTO_COLLECT_LIST_ITEM_RESTRICTION = new ItemRestriction();
 
 	@Config(
 			type = Config.Type.TWEAK,
@@ -958,6 +970,9 @@ public class TweakerMoreConfigs
 		TweakerMoreConfigs.HAND_RESTORE_RESTRICTION.setListContents(TweakerMoreConfigs.HAND_RESTORE_BLACKLIST.getStrings(), TweakerMoreConfigs.HAND_RESTORE_WHITELIST.getStrings());
 		TweakerMoreConfigs.AUTO_CLEAN_CONTAINER_RESTRICTION.setListType((UsageRestriction.ListType)TweakerMoreConfigs.AUTO_CLEAN_CONTAINER_LIST_TYPE.getOptionListValue());
 		TweakerMoreConfigs.AUTO_CLEAN_CONTAINER_RESTRICTION.setListContents(TweakerMoreConfigs.AUTO_CLEAN_CONTAINER_BLACKLIST.getStrings(), TweakerMoreConfigs.AUTO_CLEAN_CONTAINER_WHITELIST.getStrings());
+
+		TweakerMoreConfigs.AUTO_COLLECT_LIST_ITEM_RESTRICTION.setListType(UsageRestriction.ListType.WHITELIST);
+		TweakerMoreConfigs.AUTO_COLLECT_LIST_ITEM_RESTRICTION.setListContents(new ArrayList<>(), TweakerMoreConfigs.AUTO_COLLECT_LIST_Item_LIST.getStrings());
 
 		SpectatorTeleportCommand.init();
 		WindowSizeHelper.onConfigLoaded();

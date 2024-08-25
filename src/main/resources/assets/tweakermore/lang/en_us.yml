@@ -25,6 +25,21 @@ tweakermore:
     autoCleanContainerBlackList:
       .: autoCleanContainerBlackList
       comment: Items that will NOT be thrown out from the container with @option#autoCleanContainer@
+    autoCollectListItem:
+      .: autoCollectListItem
+      comment: |-
+        Automatically collect all items in the opened container which are in the list
+        and then close the container
+      pretty_name: Auto Collect List Item
+    autoCollectListItemCloseGui:
+      .: autoCollectListItemCloseGui
+      comment: If the container gui should be closed after using the @option#autoCollectListItem@ feature
+    autoCollectListItemDrop:
+      .: autoCollectListItemDrop
+      comment: Automatically drop all items in the player container which are in the list
+    autoCollectListItemList:
+      .: autoCollectListItemList
+      comment: The list of items to be collected by @option#autoCollectListItem@
     autoCollectMaterialListItem:
       .: autoCollectMaterialListItem
       comment: |-

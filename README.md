@@ -31,3 +31,15 @@ More features/tweaks will be enabled with these mods
 - [Tweakeroo](https://legacy.curseforge.com/minecraft/mc-mods/tweakeroo)
 - [Xaero's World Map](https://legacy.curseforge.com/minecraft/mc-mods/xaeros-world-map)
 - And more...
+
+## Modified by Little_YangYang
+
+Add features for personal use.
+
+Feature/Container:
+
+- Auto collect from list
+
+### Attention
+
+Features for added above are **NOT TEST** under all original supported versions, only test on **1.20.4**, use at your own risk!

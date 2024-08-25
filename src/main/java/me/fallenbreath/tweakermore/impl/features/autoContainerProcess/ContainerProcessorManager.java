@@ -43,7 +43,8 @@ public class ContainerProcessorManager
 			new ContainerCleaner(),
 			new ContainerFiller(),
 			new ContainerItemPutBackProcessor(),
-			new ContainerMaterialListItemCollector()
+			new ContainerMaterialListItemCollector(),
+			new ContainerListItemCollector()
 	);
 
 	private static boolean hasTweakEnabled()

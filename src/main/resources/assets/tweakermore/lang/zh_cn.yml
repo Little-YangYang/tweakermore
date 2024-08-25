@@ -25,6 +25,21 @@ tweakermore:
     autoCleanContainerBlackList:
       .: 自动清空容器-黑名单
       comment: 使用@option#autoCleanContainer@时不会从容器里中扔出的物品类型
+    autoCollectListItem:
+      .: 自动收集列表物品
+      comment: |-
+        打开容器后，自动收集列表中的物品至玩家物品栏
+        然后关闭容器
+      pretty_name: 自动收集列表物品
+    autoCollectListItemCloseGui:
+      .: 自动收集列表物品-关闭GUI
+      comment: 在使用@option#autoCollectListItem@功能后，是否关闭容器的GUI
+    autoCollectListItemDrop:
+      .: 自动收集列表物品-自动丢出
+      comment: 在使用@option#autoCollectListItem@功能后，是否自动从玩家物品栏中丢出所有列表中的物品
+    autoCollectListItemList:
+      .: 自动收集列表物品-列表
+      comment: 在使用@option#autoCollectListItem@功能后，该列表中的物品将会被收集
     autoCollectMaterialListItem:
       .: 自动收集材料列表物品
       comment: |-
