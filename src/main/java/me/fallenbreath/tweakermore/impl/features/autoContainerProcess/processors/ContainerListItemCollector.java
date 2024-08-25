@@ -21,7 +21,6 @@
 package me.fallenbreath.tweakermore.impl.features.autoContainerProcess.processors;
 
 import fi.dy.masa.itemscroller.util.InventoryUtils;
-import fi.dy.masa.malilib.util.restrictions.UsageRestriction;
 import me.fallenbreath.tweakermore.TweakerMoreMod;
 import me.fallenbreath.tweakermore.config.TweakerMoreConfigs;
 import me.fallenbreath.tweakermore.config.options.TweakerMoreConfigBooleanHotkeyed;
@@ -29,7 +28,6 @@ import net.minecraft.client.gui.screen.ingame.ContainerScreen;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.container.Slot;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class ContainerListItemCollector implements IContainerProcessor{
