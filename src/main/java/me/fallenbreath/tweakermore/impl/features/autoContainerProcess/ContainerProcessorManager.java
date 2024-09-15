@@ -44,7 +44,8 @@ public class ContainerProcessorManager
 			new ContainerFiller(),
 			new ContainerItemPutBackProcessor(),
 			new ContainerMaterialListItemCollector(),
-			new ContainerListItemCollector()
+			new ContainerListItemCollector(),
+			new ContainerNbtCollect()
 	);
 
 	private static boolean hasTweakEnabled()

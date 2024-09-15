@@ -40,6 +40,9 @@ tweakermore:
     autoCollectListItemList:
       .: 自动收集列表物品-列表
       comment: 在使用@option#autoCollectListItem@功能后，该列表中的物品将会被收集
+    collectContainerNbtToFile:
+      .: 收集容器NBT到文件
+      comment: 在打开容器时，将容器的所有slots的item NBT数据保存到文件
     autoCollectMaterialListItem:
       .: 自动收集材料列表物品
       comment: |-

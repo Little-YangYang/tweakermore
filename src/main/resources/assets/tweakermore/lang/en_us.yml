@@ -40,6 +40,9 @@ tweakermore:
     autoCollectListItemList:
       .: autoCollectListItemList
       comment: The list of items to be collected by @option#autoCollectListItem@
+    collectContainerNbtToFile:
+      .: collectContainerNbtToFile
+      comment: collect nbt tags from all container slots to a file, json mode
     autoCollectMaterialListItem:
       .: autoCollectMaterialListItem
       comment: |-

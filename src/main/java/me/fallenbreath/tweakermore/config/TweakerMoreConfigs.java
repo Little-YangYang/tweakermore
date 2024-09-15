@@ -95,6 +95,8 @@ public class TweakerMoreConfigs
 	@Config(type = Config.Type.GENERIC, restriction = @Restriction(require = @Condition(ModIds.itemscroller)), category = Config.Category.FEATURES)
 	public static final TweakerMoreConfigBoolean AUTO_COLLECT_LIST_ITEM_CLOSE_GUI = newConfigBoolean("autoCollectListItemCloseGui", true);
 
+	@Config(type=Config.Type.TWEAK, category = Config.Category.FEATURES)
+	public static final TweakerMoreConfigBooleanHotkeyed CollectContainerNbtToFile = newConfigBooleanHotkeyed("collectContainerNbtToFile");
 
 	@Config(type = Config.Type.TWEAK, restriction = @Restriction(require = @Condition(ModIds.itemscroller)), category = Config.Category.FEATURES)
 	public static final TweakerMoreConfigBooleanHotkeyed AUTO_CLEAN_CONTAINER = newConfigBooleanHotkeyed("autoCleanContainer");
